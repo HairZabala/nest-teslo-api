@@ -9,11 +9,13 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { ProductImage } from './product-image.entity';
+import { ApiProperty } from '@nestjs/swagger';
 
 @Entity({
   name: 'products',
 })
 export class Product {
+  @ApiProperty()
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
